@@ -1,0 +1,100 @@
+//Created by Rishita Mukherjee
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n, r,c;
+    cout<<"Enter the number of rows : ";
+    cin>>r;
+    cout<<"\nEnter the number of columns : ";
+    cin>>c;
+    n=c*r;
+int arr[r][c],i,j,arr1[r][c],trans[n][n],trans1[n][n];
+ cout<<"\nEnter the elements of array : \n";
+for(i = 0; i < r; ++i)
+{
+       for(j = 0; j < c; ++j)
+       {
+           cin >> arr[i][j];
+           arr1[i][j]=arr[i][j];
+       }
+
+}
+
+  cout<<"\nLower triangular matrix : \n"<<endl;
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            if (i < j)
+            {
+                cout << "0" << " ";
+            }
+            else
+            {
+            cout << arr[i][j] << " ";
+            }
+        }
+        cout << endl;
+    }
+
+cout<<"\nTri diagonal matrix : "<<endl;
+
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+           if(i==j||i==j-1||i==j+1)
+           {
+               cout<<arr1[i][j]<<" ";
+           }
+           else
+           {
+           cout<<"0"<<" ";
+           }
+        }
+        cout << endl;
+    }
+
+//Created by Rishita Mukherjee
+cout<<"\nTranspose of tri diagonal matrix : "<<endl;
+
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+           if(i==j||i==j-1||i==j+1)
+           {
+               cout<<arr1[j][i]<<" ";
+           }
+           else
+           {
+           cout<<"0"<<" ";
+           }
+        }
+        cout << endl;
+    }
+
+
+  cout<<"\nTranspose of lower triangular matrix : \n"<<endl;
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            if (i < j)
+            {
+                cout << "0" << " ";
+            }
+            else
+            {
+            cout << arr[j][i] << " ";
+            }
+        }
+        cout << endl;
+    }
+
+return 0;
+}
+//Created by Rishita Mukherjee
